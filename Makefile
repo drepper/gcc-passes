@@ -38,5 +38,4 @@ clean:
 	-rm -f $(ALLBIN) $(foreach a,$(ALL),$($(a)_OBJS))
 
 check: all
-	$(CXX) -fplugin=$$PWD/assume.so -fplugin-arg-assume-sds=3 -c test1.cc
 	$(CXX) -fplugin=$$PWD/passes.so -c test1.cc
